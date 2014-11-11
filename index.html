@@ -137,7 +137,8 @@
             </p>
         */
         .error > input,
-        .error > label {
+        .error > label,
+        .error > span {
             color: red;
         }
 
@@ -145,21 +146,51 @@
             border-color: red;
         }
 
+        #emailP.error:after {
+            content:"--------- your email address is not valid !";
+            color:red;
+            font-size: 0.8em;
+        }
+
+        #passP.error:after {
+            content:"--------- your password must longer than 8 characters !";
+            color:red;
+            font-size: 0.8em;
+        }
+
+        #colourP.error:after{
+            content:"--------- you must select one of the clours!";
+            color:red;
+            font-size: 0.8em;
+        }
+
+        #animalP.error:after{
+            content:"--------- you must select at least two animals!";
+            color:red;
+            font-size: 0.8em;
+        }
+
+        #tigerP.error:after{
+            content:"--------- you must enter your tiger type!";
+            color:red;
+            font-size: 0.8em;
+        }
+
     </style>
 </head>
 
 <body>
-    <form method='post' action=''>
+    <form onSubmit="return finalCheck()" method='post' action=''>
         <h1>Fill out this awesome form</h1>
         <fieldset>
             <h3>Your details</h3>
-            <p>
+            <p id="emailP">
                 <label class='label' for='email'>
                     Email
                 </label>
                 <input type='text' id='email' name='email'>
             </p>
-            <p>
+            <p id="passP">
                 <label class='label' for='password'>
                     Password
                 </label>
@@ -169,7 +200,7 @@
 
         <fieldset>
             <h3>Your animal</h3>
-            <p>
+            <p id="colourP">
                 <label class='label' for='colour'>
                     Colour
                 </label>
@@ -182,7 +213,7 @@
                     <option value='brown'>Brown</option>
                 </select>
             </p>
-            <p>
+            <p id="animalP">
                 <span class="label">
                     Animal
                 </span>
@@ -208,7 +239,7 @@
                 </label>
 
             </p>
-            <p>
+            <p id="tigerP">
                 <label class='label' for='tiger_type'>
                     Type of tiger
                 </label>
@@ -217,9 +248,10 @@
         </fieldset>
         <fieldset>
             <p>
-                <input type='submit' value='Create account'>
+                <input id='submit' type='submit' value='Create account'>
             </p>
         </fieldset>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>

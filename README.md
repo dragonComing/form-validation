@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Form validation
 =======================
 We've created this problem to evaluate how developers tackle a real-world problem. If you've been assigned this problem you should spend around **2 hours** working on it. The last thing we want you to do is toil away for days on end!
@@ -24,3 +25,9 @@ If the form is submitted and an error occurs, the error element's parent should 
 
 ## Submission
 Please email us a zip or tar.gz of your solution to 1337h4x0r@springload.co.nz.
+=======
+form-validation
+===============
+
+To solve the validation problems
+>>>>>>> 670e906a5ea305e54dfe642d83ea0da89553d8b7
